@@ -1,0 +1,18 @@
+$colorprimary: #9356DC;
+$colorsecondary: #FF79DA;
+$colortertiary: #99E2D0;
+$color4: #F5EDFF;
+
+$colorbgprimary: #ECECEC;
+$colorbgsecondary: #ffffff;
+$colorbgtertiary: #F6F6F6;
+$colorbgstep: #EAEAEA;
+$colorstepfctn: #F5EDFF;
+
+
+$btnhover: (
+  hover: (
+      bg: $colorstepfctn,
+      txt: white,
+  )
+);

@@ -1,0 +1,195 @@
+@mixin centerbloc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin fonctionnement-btn_standard{
+    width: 325px;
+    height: 74px;
+    left: 30px;
+    top: 699px;
+    background: #ECECEC;
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 21px;
+}
+
+@mixin typoh1{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+}
+
+@mixin typoh2{
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 21px;
+}
+
+@mixin typostep{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+@mixin typobtn{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+
+@mixin typoh1card{
+    font-family: Roboto;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+@mixin typoh2card{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+@mixin typologo{
+    font-family: Shrikhand;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+}
+
+@mixin TypoTitleMenu{
+    font-family: 'Shrikhand';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 41px;
+}
+
+
+@mixin TypoPriceCard{
+    font-family: 'Roboto';
+    font-style: normalo;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+@mixin TypoSectionMenu{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 16px;
+    padding-bottom: 8px;
+}
+
+
+@mixin btn__pink {
+    border-radius: 30px;
+    height: 50px;
+    width: 218px;
+    background-image: linear-gradient(to bottom, $colorsecondary, $colorprimary);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@mixin stepcard{
+    height: 74px;
+    width: 300px;
+    border-radius: 21px;
+    background-color: $colorbgprimary;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-bottom: 32px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@mixin stepcardnumber{
+    display: flex;
+    height: 25px;
+    width: 25px;
+    border-radius: 20px;
+    background-color: $colorprimary;
+    color: white;
+    font-size: 15px;
+}
+
+
+@mixin carteimage{
+    width: 95%;
+    height: 200px;
+    border-radius: 14px 14px 0 0;
+    background-color: $colorprimary;
+}
+
+
+@mixin cartedescription{
+    height: 76px;
+    width: 95%;
+    border-radius: 0px 0px 14px 14px;
+    color: black;
+    background-color: white;
+    display: flex;
+}
+
+
+@mixin titleposition{
+    margin-left: 25px;
+}
+
+
+@mixin boxshadow {
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.15);
+}
+
+@mixin foodcard{
+    width: 349px;
+    height: 68px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+@mixin FoodCardTitle{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+@mixin AlignTitleMenu{
+    padding-left: 20px;
+}
+
+@mixin New-box{
+    width: 79px;
+    height: 29px;
+    border-radius: 2px;
+    color: #279379;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+
+    background-color: $colortertiary;
+}

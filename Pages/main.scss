@@ -1,0 +1,577 @@
+@import "../Utils/_variables.scss";
+@import "../Utils/_mixins.scss";
+@import "../Utils/_fonctions.scss";
+
+
+body{
+    margin: 0 auto;
+    width: 100%;
+    min-width: 375px;
+    @include centerbloc;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+}
+
+h2,h3,p{
+    margin: 0;
+}
+
+.bandeHeader{
+    display: flex;
+    height: 63px;
+    width: 100%;
+    color: $colorbgsecondary;
+    @include centerbloc;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 50px 0 50px;
+    z-index: 2;
+}
+
+.bandeHeader__link{
+    height: 30px;
+    width: 190px;
+    @include centerbloc;
+
+}
+
+.bandeHeader__logo{
+    display: block;
+    background: url('images/logo/ohmyfood.png') no-repeat center;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.bandeHeader__txt{
+    @include centerbloc;
+    width: 100%;
+}
+
+.title{
+    @include typologo;
+    color: black;
+    font-size: 30px;
+}
+
+.title-center{
+    padding-right: 40px;
+}
+
+
+.arrow--center{
+    position: absolute;
+    left: 20px;
+}
+
+
+section{
+    @include centerbloc;
+    flex-direction: column;
+}
+
+.zone{
+    height: 42px;
+    background-color: $colorbgprimary;
+    width: 100%;
+    @include centerbloc;
+    flex-direction: row;
+}
+
+ .zone-txt{
+    @include typostep;
+    padding-left: 18px;
+    margin-right: 18px;
+}
+
+
+.reserve{
+    background-color:  $colorbgtertiary;
+    height: 286px;
+    flex-direction: column;
+    @include centerbloc;
+    width: 100%;
+}
+
+.reserve__heading{
+    @include typoh1;
+    margin: -20px 50px 0 50px;
+    padding-bottom: 10px;
+}
+
+
+.reserve__byline{
+    @include typoh2;
+    padding-bottom: 30px;
+    margin: 0 20px 0 20px;
+    text-align: center;
+}
+
+.reserve-btn, .commande-btn{
+    @include  btn__pink;
+    @include centerbloc;
+    cursor: pointer;
+}
+
+.commande-centered{
+    @include centerbloc
+}
+
+.commande-btn{
+    margin-top: 45px;
+    margin-bottom: 58px;
+}
+
+.reserve-btn__heading, .commande-btn__heading{
+    color: white;
+    @include typobtn
+}
+
+.fonctionnement{
+    height: 443px;
+    width: 100%;
+    @include centerbloc;
+    flex-direction: column;
+}
+
+.fonctionnement__heading{
+    align-self: flex-start;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    @include titleposition;
+}
+
+.fonctionnement-card{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.number{
+    @include stepcardnumber;
+    @include centerbloc;
+    margin-left: -10px;
+    margin-right: 25px;
+}
+
+
+.fonctionnement-card_heading{
+    @include typostep;
+    margin-left: 27px;
+}
+
+.stepcard{
+    @include stepcard;
+    align-items: center;
+    justify-content: flex-start;
+
+    &:hover{
+        background-color: $color4;
+        cursor: default;
+
+        .picto{
+            color: $colorprimary;
+        }
+    }
+}
+
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: $colorbgtertiary;
+    padding-bottom: 50px;
+}
+
+.restaurants__heading{
+    display: flex;
+    align-self: flex-start;
+    margin: 40px 0 20px 0;
+    @include titleposition;
+}
+
+.carte{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+}
+
+.gout__img,.enchantee__img,.francaise__img,.sens__img{
+    position: relative;
+    @include carteimage;
+    @include boxshadow;
+}
+
+.gout__img, .heading__img-menu_gout{
+    background: url('images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.enchantee__img, .heading__img-menu_enchantee{
+    background: url('images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.francaise__img, .heading__img-menu_francaise{
+    background: url('images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.sens__img, .heading__img-menu_sens{
+    background: url('images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.heading__img-menu_enchantee, .heading__img-menu_francaise, .heading__img-menu_sens,.heading__img-menu_gout {
+    height: 220px;
+    width: 100%;    
+}
+
+.new{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    @include New-box;
+    right: 20px;
+    top: 20px;
+}
+
+.flexrow{
+    @include cartedescription;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+    @include boxshadow;
+    align-items: center;
+}
+
+.gout-description,.enchantee-description,.francaise-description,.sens-description {
+    flex-direction: column;
+    width: 70%;
+
+}
+
+.carte__heading,.enchantee__heading, .francaise__heading,.sens__heading {
+    @include typoh1card;
+    margin-left: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.carte__byline,.enchantee__byline,.francaise__byline,.sens__byline {
+    @include typoh2;
+    margin-left: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.heart{
+    height: 20px;
+    width: 20px;
+    margin-right: 30px;
+
+    &:hover {
+        color: transparent;
+        background-clip: text;
+        background-image: linear-gradient(to bottom, $colorprimary, $colorsecondary);    
+    }
+}
+
+
+.fa-solid{
+    @include centerbloc;
+    height: 10px;
+    width: 10px;
+}
+
+.footer{
+    width: 100%;
+    height: 197px;
+    color: #ffffff;
+    background-color: #353535;
+    @include centerbloc;
+    justify-content: flex-start;
+}
+
+.footer__picto{
+    @include centerbloc;
+    justify-content: flex-start;
+}
+
+.footer__heading{
+    @include typologo;
+    margin-bottom: 15px;
+    cursor: default;
+}
+
+#ohmyfood{
+    margin-left: 25px;
+    margin-top: -15px;
+}
+
+.footer__byline{
+    color: #ffffff;
+    background-color: #353535;
+    width: 100%;
+    @include typoh2;
+    margin-top: 5px;
+}
+
+
+/* CSS PAGES RESTAURANTS */
+
+
+
+.pad{
+    margin-left: 10px;
+}
+
+
+.heading-page{
+display: flex;
+align-items: center;
+padding-top: 20px;
+font-size: 25px;
+}
+
+.heartcentered{
+    position: absolute;
+    right: 30px;
+}
+
+.PageTitle{
+    flex-wrap: nowrap;
+    @include TypoTitleMenu;
+    @include AlignTitleMenu;
+    white-space: nowrap;
+
+}
+
+.menu__title{
+    @include TypoSectionMenu;
+}
+
+.menu{
+    background-color: $colorbgtertiary;
+    width: 100%;
+    flex-direction: column;
+    border-radius: 50px 50px 0 0;
+    margin-top: -50px;
+}
+
+.menu__section{
+    @include FoodCardTitle;
+    @include AlignTitleMenu;
+    padding-top: 40px;
+}
+
+.menu__underline{
+    width: 35px;
+    height: 3px;
+    background-color: $colortertiary;
+    @include AlignTitleMenu;
+    margin-bottom: 10px;
+}
+
+
+.disapear::before{
+    display: none;
+}
+
+.hovercheck{
+    @include centerbloc;
+    width: 0px;
+    height: 68px;
+    margin-left: 20px;
+}
+
+
+.food__part{
+    padding: 8px 0 8px 0;
+    animation: apparition 900ms ease-in-out;
+    animation-fill-mode: both;
+
+
+    &:hover .hovercheck{
+        cursor: pointer;
+        background-color: grey;
+            @include centerbloc;
+            width: 59px;
+            height: 68px;
+            background-color: $colortertiary;
+            border-radius: 0 15px 15px 0;
+            transition: width 500ms ease-in-out;
+
+        
+
+        & .disapear::before{
+            display: block;
+        }
+    }
+
+    &:hover .fa-check-circle{
+        transform: rotate(-360deg);
+        transition: transform 500ms ease-in-out;
+    }
+}
+
+
+.food__part:nth-of-type(1){
+    animation-delay: 0.1s;
+}
+
+.food__part:nth-of-type(2){
+    animation-delay: 0.2s;
+}
+
+.food__part:nth-of-type(3){
+    animation-delay: 0.3s;
+}
+
+.food__part:nth-of-type(4){
+    animation-delay: 0.4s;
+}
+
+
+
+@keyframes apparition{
+        0%{
+            opacity: 0;
+            margin-top: 20px;
+        }   
+
+        100%{
+            opacity: 1;
+            margin-top: 0px;
+        }
+    }
+
+
+.food__card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    @include foodcard;
+}
+
+.food__txt{
+    flex-direction: column;
+    align-self: center;
+    width: 250px;
+    margin-left: 11px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.food__title{
+    @include typoh1card;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.food__byline{
+    @include typoh2card;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.food__price{
+    @include TypoPriceCard;
+    @include centerbloc;
+    padding-left: 20px;
+    margin: 30px 0px 0 20px;
+}
+
+.food__part{
+    @include centerbloc;
+}
+
+/* SASS pages */
+
+
+.fa-check-circle{
+    color: #FFFFFF;
+    transform: rotate(0deg);
+}
+
+.fa-arrow-left{
+    color: #000000;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    align-self: center;
+    padding-left: 25px;
+}
+
+
+@media all and (min-width: 768px){
+
+.restaurants{
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.restaurants__heading{
+    margin-right: 80%;
+    margin-bottom: 50px;
+}
+
+.carte{
+    width: 45%;
+}
+
+}
+
+@media all and (min-width: 1080px){
+
+.fonctionnement{
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fonctionnement__heading{
+    position: absolute;
+    left: 25px;
+    margin-bottom:0;
+    margin-left: 0;
+    margin-top: 40px;
+}
+
+.menu__part{
+    @include centerbloc;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.food__part{
+    margin: 20px;
+}
+
+.stepcard{
+    margin: 0 30px 0 30px;
+}
+
+.carte{
+    width: 20%;
+}
+          
+}
