@@ -2,14 +2,17 @@
 @import "../Utils/_mixins.scss";
 @import "../Utils/_fonctions.scss";
 
+html {
+    scroll-behavior: smooth;
+}
 
 body{
+    @include centerbloc;
     margin: 0 auto;
     width: 100%;
     min-width: 375px;
-    @include centerbloc;
     flex-direction: column;
-    font-family: 'Roboto', sans-serif;
+    font-family: $fontMain, sans-serif;
 }
 
 main{
@@ -27,11 +30,10 @@ h2,h3,p{
 }
 
 .bandeHeader{
-    display: flex;
+    @include centerbloc;
     height: 63px;
     width: 100%;
     color: $colorbgsecondary;
-    @include centerbloc;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     flex-direction: row;
     justify-content: space-between;
@@ -40,10 +42,9 @@ h2,h3,p{
 }
 
 .bandeHeader__link{
+    @include centerbloc;
     height: 30px;
     width: 190px;
-    @include centerbloc;
-
 }
 
 .bandeHeader__logo{
@@ -61,12 +62,12 @@ h2,h3,p{
 
 .title{
     @include typologo;
-    color: black;
+    color: $fontColor;
     font-size: 30px;
 }
 
 .title-center{
-    padding-right: 40px;
+    padding-right: 17px;
 }
 
 
@@ -82,11 +83,11 @@ section{
 }
 
 .zone{
+    @include centerbloc;
+    flex-direction: row;
     height: 42px;
     background-color: $colorbgprimary;
     width: 100%;
-    @include centerbloc;
-    flex-direction: row;
 }
 
  .zone-txt{
@@ -122,6 +123,12 @@ section{
     @include  btn__pink;
     @include centerbloc;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        background-color: red;
+        transform: scale(1.02);
+    }
 }
 
 .commande-centered{
@@ -135,7 +142,7 @@ section{
 
 .reserve-btn__heading, .commande-btn__heading{
     color: white;
-    @include typobtn
+    @include typobtn;
 }
 
 .fonctionnement{
@@ -175,11 +182,16 @@ section{
     @include stepcard;
     align-items: center;
     justify-content: flex-start;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    
+
 
     &:hover{
-        background-color: $color4;
+        background-color: $colorstepfctn;
         cursor: default;
-
+        transform: scale(1.02);
+        
         .picto{
             color: $colorprimary;
         }
@@ -207,7 +219,12 @@ section{
     align-items: center;
     flex-direction: column;
     width: 90%;
-}
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+}    
 
 .gout__img,.enchantee__img,.francaise__img,.sens__img{
     position: relative;
@@ -216,22 +233,22 @@ section{
 }
 
 .gout__img, .heading__img-menu_gout{
-    background: url('images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg') no-repeat center;
+    background: url('../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg') no-repeat center;
     background-size: cover;
 }
 
 .enchantee__img, .heading__img-menu_enchantee{
-    background: url('images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg') no-repeat center;
+    background: url('../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg') no-repeat center;
     background-size: cover;
 }
 
 .francaise__img, .heading__img-menu_francaise{
-    background: url('images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg') no-repeat center;
+    background: url('../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg') no-repeat center;
     background-size: cover;
 }
 
 .sens__img, .heading__img-menu_sens{
-    background: url('images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg') no-repeat center;
+    background: url('../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg') no-repeat center;
     background-size: cover;
 }
 
@@ -241,13 +258,12 @@ section{
 }
 
 .new{
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
+    @include centerbloc;
     @include New-box;
-    right: 20px;
+    @include boxshadow;
+    right: 10px;
     top: 20px;
+    position: relative;
 }
 
 .flexrow{
@@ -305,7 +321,7 @@ section{
 .footer{
     width: 100%;
     height: 197px;
-    color: #ffffff;
+    color: $colorbgsecondary;
     background-color: #353535;
     @include centerbloc;
     justify-content: flex-start;
@@ -328,7 +344,7 @@ section{
 }
 
 .footer__byline{
-    color: #ffffff;
+    color: $colorbgsecondary;
     background-color: #353535;
     width: 100%;
     @include typoh2;
@@ -386,7 +402,7 @@ font-size: 25px;
 .menu__underline{
     width: 35px;
     height: 3px;
-    background-color: $colortertiary;
+    background-color: $color3;
     @include AlignTitleMenu;
     margin-bottom: 10px;
 }
@@ -416,7 +432,7 @@ font-size: 25px;
             @include centerbloc;
             width: 59px;
             height: 68px;
-            background-color: $colortertiary;
+            background-color: $color3;
             border-radius: 0 15px 15px 0;
             transition: width 500ms ease-in-out;
 
@@ -464,7 +480,6 @@ font-size: 25px;
         }
     }
 
-
 .food__card{
     display: flex;
     flex-direction: row;
@@ -508,12 +523,12 @@ font-size: 25px;
 
 
 .fa-check-circle{
-    color: #FFFFFF;
+    color: $colorbgsecondary;
     transform: rotate(0deg);
 }
 
 .fa-arrow-left{
-    color: #000000;
+    color: $fontColor;
     height: 15px;
     width: 15px;
     display: flex;
@@ -549,7 +564,6 @@ font-size: 25px;
 }
 
 .fonctionnement__heading{
-    position: absolute;
     left: 25px;
     margin-bottom:0;
     margin-left: 0;

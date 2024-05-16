@@ -1,14 +1,10 @@
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
   width: 100%;
   min-width: 375px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
 }
@@ -29,11 +25,12 @@ h2, h3, p {
 
 .bandeHeader {
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 63px;
   width: 100%;
   color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   flex-direction: row;
   justify-content: space-between;
@@ -42,11 +39,11 @@ h2, h3, p {
 }
 
 .bandeHeader__link {
+  height: 30px;
+  width: 190px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30px;
-  width: 190px;
 }
 
 .bandeHeader__logo {
@@ -65,7 +62,7 @@ h2, h3, p {
 }
 
 .title {
-  font-family: "Shrikhand";
+  font-family: Shrikhand;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -76,7 +73,7 @@ h2, h3, p {
 }
 
 .title-center {
-  padding-right: 17px;
+  padding-right: 40px;
 }
 
 .arrow--center {
@@ -92,13 +89,13 @@ section {
 }
 
 .zone {
+  height: 42px;
+  background-color: #ECECEC;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: 42px;
-  background-color: #ECECEC;
-  width: 100%;
 }
 
 .zone-txt {
@@ -152,11 +149,6 @@ section {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-.reserve-btn:hover, .commande-btn:hover {
-  background-color: red;
-  transform: scale(1.02);
 }
 
 .commande-centered {
@@ -190,10 +182,13 @@ section {
 }
 
 .fonctionnement__heading {
+  display: flex;
   align-self: flex-start;
   margin-bottom: 30px;
   margin-top: 20px;
   margin-left: 25px;
+  margin-right: 80%;
+  margin-bottom: 50px;
 }
 
 .fonctionnement-card {
@@ -239,13 +234,10 @@ section {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   align-items: center;
   justify-content: flex-start;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
 }
 .stepcard:hover {
   background-color: #F5EDFF;
   cursor: default;
-  transform: scale(1.02);
 }
 .stepcard:hover .picto {
   color: #9356DC;
@@ -272,10 +264,6 @@ section {
   align-items: center;
   flex-direction: column;
   width: 90%;
-  transition: transform 0.2s ease-in-out;
-}
-.carte:hover {
-  transform: scale(1.02);
 }
 
 .gout__img, .enchantee__img, .francaise__img, .sens__img {
@@ -288,22 +276,22 @@ section {
 }
 
 .gout__img, .heading__img-menu_gout {
-  background: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat center;
+  background: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat center;
   background-size: cover;
 }
 
 .enchantee__img, .heading__img-menu_enchantee {
-  background: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg") no-repeat center;
+  background: url("images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg") no-repeat center;
   background-size: cover;
 }
 
 .francaise__img, .heading__img-menu_francaise {
-  background: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") no-repeat center;
+  background: url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") no-repeat center;
   background-size: cover;
 }
 
 .sens__img, .heading__img-menu_sens {
-  background: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") no-repeat center;
+  background: url("images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") no-repeat center;
   background-size: cover;
 }
 
@@ -314,6 +302,7 @@ section {
 
 .new {
   display: flex;
+  position: absolute;
   justify-content: center;
   align-items: center;
   width: 79px;
@@ -326,10 +315,8 @@ section {
   font-size: 14px;
   line-height: 16px;
   background-color: #99E2D0;
-  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.15);
-  right: 10px;
+  right: 20px;
   top: 20px;
-  position: relative;
 }
 
 .flexrow {
@@ -353,7 +340,7 @@ section {
 }
 
 .carte__heading, .enchantee__heading, .francaise__heading, .sens__heading {
-  font-family: "Roboto";
+  font-family: Roboto;
   font-size: 17px;
   font-weight: 700;
   line-height: 21px;
@@ -383,8 +370,7 @@ section {
 }
 .heart:hover {
   color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
 }
 
@@ -415,7 +401,7 @@ section {
 }
 
 .footer__heading {
-  font-family: "Shrikhand";
+  font-family: Shrikhand;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -499,7 +485,7 @@ section {
 .menu__underline {
   width: 35px;
   height: 3px;
-  background-color: #F5EDFF;
+  background-color: #99E2D0;
   padding-left: 20px;
   margin-bottom: 10px;
 }
@@ -530,7 +516,7 @@ section {
   align-items: center;
   width: 59px;
   height: 68px;
-  background-color: #F5EDFF;
+  background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
   transition: width 500ms ease-in-out;
 }
@@ -590,7 +576,7 @@ section {
 }
 
 .food__title {
-  font-family: "Roboto";
+  font-family: Roboto;
   font-size: 17px;
   font-weight: 700;
   line-height: 21px;
@@ -631,12 +617,12 @@ section {
 
 /* SASS pages */
 .fa-check-circle {
-  color: #ffffff;
+  color: #FFFFFF;
   transform: rotate(0deg);
 }
 
 .fa-arrow-left {
-  color: black;
+  color: #000000;
   height: 15px;
   width: 15px;
   display: flex;
@@ -650,10 +636,12 @@ section {
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .restaurants__heading {
     margin-right: 80%;
     margin-bottom: 50px;
   }
+
   .carte {
     width: 45%;
   }
@@ -663,12 +651,15 @@ section {
     flex-direction: row;
     justify-content: center;
   }
+
   .fonctionnement__heading {
+    position: absolute;
     left: 25px;
     margin-bottom: 0;
     margin-left: 0;
     margin-top: 40px;
   }
+
   .menu__part {
     display: flex;
     justify-content: center;
@@ -676,13 +667,18 @@ section {
     flex-direction: row;
     flex-wrap: wrap;
   }
+
   .food__part {
     margin: 20px;
   }
+
   .stepcard {
     margin: 0 30px 0 30px;
   }
+
   .carte {
     width: 20%;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=stylesheet.css.map */

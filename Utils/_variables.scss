@@ -1,7 +1,10 @@
+//Color
 $colorprimary: #9356DC;
 $colorsecondary: #FF79DA;
-$colortertiary: #99E2D0;
-$color4: #F5EDFF;
+$color3: #F5EDFF;
+$color4: #99E2D0;
+$color5: #279379;
+$colorFooter: #353535;
 
 $colorbgprimary: #ECECEC;
 $colorbgsecondary: #ffffff;
@@ -9,10 +12,15 @@ $colorbgtertiary: #F6F6F6;
 $colorbgstep: #EAEAEA;
 $colorstepfctn: #F5EDFF;
 
+$fontColor:black;
 
-$btnhover: (
-  hover: (
-      bg: $colorstepfctn,
-      txt: white,
-  )
+$fontMain: 'Roboto';
+$fontSec: 'Shrikhand';
+
+
+//Cards Size responsive
+$foodCard-sizes: (
+  'default': 20%,
+  'medium': 45%,   // pour les écrans à partir de 768px
+  'large': 20%     // pour les écrans à partir de 1080px
 );
