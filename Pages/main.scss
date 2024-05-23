@@ -92,7 +92,7 @@ section{
 
  .zone-txt{
     @include typostep;
-    padding-left: 18px;
+    padding-left: 5px;
     margin-right: 18px;
 }
 
@@ -122,11 +122,9 @@ section{
 .reserve-btn, .commande-btn{
     @include  btn__pink;
     @include centerbloc;
-    cursor: pointer;
     transition: transform 0.2s ease-in-out;
 
     &:hover {
-        background-color: red;
         transform: scale(1.02);
     }
 }
@@ -146,17 +144,19 @@ section{
 }
 
 .fonctionnement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 443px;
     width: 100%;
-    @include centerbloc;
-    flex-direction: column;
 }
 
 .fonctionnement__heading{
+    display: flex;
     align-self: flex-start;
-    margin-bottom: 30px;
-    margin-top: 20px;
-    @include titleposition;
+    margin: 40px 0 20px 0;
+    margin-left: 35px;
+    margin-right: 80%;
 }
 
 .fonctionnement-card{
@@ -211,7 +211,7 @@ section{
     display: flex;
     align-self: flex-start;
     margin: 40px 0 20px 0;
-    @include titleposition;
+    margin-left: 25px;
 }
 
 .carte{
@@ -261,9 +261,9 @@ section{
     @include centerbloc;
     @include New-box;
     @include boxshadow;
-    right: 10px;
-    top: 20px;
     position: relative;
+    top: 20px;
+    right: 10px;
 }
 
 .flexrow{
@@ -298,11 +298,20 @@ section{
     text-overflow: ellipsis;
 }
 
-
-.heart{
+.heartcard__container{
     height: 20px;
     width: 20px;
-    margin-right: 30px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+}
+
+
+.heartcard{
+    position: absolute;
+    color: black;
+    opacity: 1;
+    z-index: 2;
+    
 
     &:hover {
         color: transparent;
@@ -311,6 +320,34 @@ section{
     }
 }
 
+.heartcard--checked{
+    position: absolute;
+
+    background-image: linear-gradient(
+        to bottom,
+        var(--colorprimary),
+        var(--colorsecondary)
+      );
+      --webkit-background-clip: text;
+      --webkit-text-fill-color: transparent;
+      opacity: 0;
+      z-index: 1;    
+}
+
+.heartcard__container:hover .heartcard {
+    opacity: 0;
+    transform: scale(0);
+    z-index: 1;
+}
+
+.heartcard__container:hover .heartcard--checked {
+    background-image: linear-gradient(to bottom, $colorprimary, $colorsecondary);    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+}
 
 .fa-solid{
     @include centerbloc;
@@ -368,10 +405,44 @@ padding-top: 20px;
 font-size: 25px;
 }
 
-.heartcentered{
+.heartcentered__container{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    margin-bottom: 5px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.heartcentered__active{
     position: absolute;
     right: 30px;
+    color: black;
+    opacity: 1;
+    z-index: 2;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
+.heartcentered__checked{
+    position: absolute;
+    right: 30px;
+    background-image: linear-gradient(to bottom, $colorprimary, $colorsecondary);    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    z-index: 1;
+}
+
+#toggle:checked ~ .heartcentered__container .heartcentered__active {
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  #toggle:checked ~ .heartcentered__container .heartcentered__checked {
+    opacity: 1;
+    z-index: 2;
+  }
+
 
 .PageTitle{
     flex-wrap: nowrap;
@@ -402,7 +473,7 @@ font-size: 25px;
 .menu__underline{
     width: 35px;
     height: 3px;
-    background-color: $color3;
+    background-color: $color4;
     @include AlignTitleMenu;
     margin-bottom: 10px;
 }
@@ -432,11 +503,9 @@ font-size: 25px;
             @include centerbloc;
             width: 59px;
             height: 68px;
-            background-color: $color3;
+            background-color: $color4;
             border-radius: 0 15px 15px 0;
             transition: width 500ms ease-in-out;
-
-        
 
         & .disapear::before{
             display: block;
@@ -560,14 +629,12 @@ font-size: 25px;
 
 .fonctionnement{
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 .fonctionnement__heading{
     left: 25px;
-    margin-bottom:0;
-    margin-left: 0;
-    margin-top: 40px;
 }
 
 .menu__part{

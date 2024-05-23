@@ -152,11 +152,6 @@
 }
 
 
-@mixin titleposition{
-  margin-left: 25px;
-}
-
-
 @mixin boxshadow {
   box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.15);
 }
@@ -194,10 +189,4 @@
   line-height: 16px;
 
   background-color: $color4;
-}
-
-
-//Responsive
-@mixin responsive-card-width {
-
 }

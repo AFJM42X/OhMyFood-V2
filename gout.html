@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Oh My Food ! francaise</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="Pages/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +29,11 @@
             <div class="menu">
                 <div class="heading-page">
                     <h2 class="PageTitle">La palette du goût</h2>
-                    <i class="far fa-heart heart-page heartcentered"></i>
+                    <input type="checkbox" id="toggle" hidden />
+                    <div class="heartcentered__container">
+                    <i class="far fa-heart heart-page heartcentered__active" onclick="document.getElementById('toggle').click()"></i>
+                    <i class="fas fa-heart heart-page heartcentered__checked" onclick="document.getElementById('toggle').click()"></i>
+                    </div>
                 </div>
                 
                 <div class="menu__section">

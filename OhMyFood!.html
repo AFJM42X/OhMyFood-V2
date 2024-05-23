@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Oh My Food !</title>
     <link rel="stylesheet" href="Pages/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
@@ -34,33 +35,35 @@
                 </a>
             </div>
 
-            <ul class="fonctionnement">
+            <div class="fonctionnement">
+
                 <h2 class="fonctionnement__heading">Fonctionnement</h2>
-                <li class="fonctionnement-card">
+
+                <a href="#section1" class="fonctionnement-card">
                     <div class="stepcard">
                         <h3 class="number">1</h3>
                         <div class="picto"><i class="fas fa-mobile-alt"></i></div>                    
                         <h2 class="fonctionnement-card_heading">Choisissez un restaurant</h2>
                     </div>
-                </li>
+                </a>
 
-                <li class="fonctionnement-card">
+                <div class="fonctionnement-card">
                     <div class="stepcard">
                         <h3 class="number">2</h3>
                         <div class="picto"><i class="fas fa-list"></i></div>                    
                         <h2 class="fonctionnement-card_heading">Composez votre menu</h2>
                     </div>
-                </li>
+                </div>
 
-                <li class="fonctionnement-card">
+                <div class="fonctionnement-card">
                     <div class="stepcard stepcard">
                         <h3 class="number">3</h3>
                         <div class="picto"><i class="fas  fa-store"></i></div>                    
                         <h2 class="fonctionnement-card_heading">Dégustez au restaurant</h2>
                     </div>
-                </li>
+                </div>
 
-            </ul>
+            </div>
 
             <div class="restaurants">
 
@@ -75,9 +78,9 @@
                                         <h2 class="carte__heading">La palette du goût</h2>
                                         <h3 class="carte__byline">Ménilmontant</h3>
                                     </div>
-                                    <div>
-                                        <i class="far fa-heart heart far"></i>
-                                        <i class="fas fa-heart heart"></i>
+                                    <div class="heartcard__container">
+                                        <i class="far fa-heart heartcard far"></i>
+                                        <i class="fas fa-heart heartcard--checked"></i>
                                     </div>
                             </div>
                 </a>
@@ -91,7 +94,10 @@
                             <h2 class="enchantee__heading">La note enchantée</h2>
                             <h3 class="enchantee__byline">Charonne</h3>
                         </div>
-                        <i class="fas fa-heart heart"></i>
+                                    <div class="heartcard__container">
+                                        <i class="far fa-heart heartcard far"></i>
+                                        <i class="fas fa-heart heartcard--checked"></i>
+                                    </div>
                     </div>
                 </a>
 
@@ -102,7 +108,10 @@
                             <h2 class="francaise__heading">À la française</h2>
                             <h3 class="francaise__byline">Cité Rouge</h3>
                         </div>
-                        <i class="fas fa-heart heart"></i>
+                        <div class="heartcard__container">
+                            <i class="far fa-heart heartcard far"></i>
+                            <i class="fas fa-heart heartcard--checked"></i>
+                        </div>
                     </div>
                 </a>
 
@@ -113,7 +122,10 @@
                             <h2 class="sens__heading">Le délice des sens</h2>
                             <h3 class="sens__byline">Folie-Méricourt</h3>
                         </div>
-                        <i class="fas fa-heart heart"></i>
+                        <div class="heartcard__container">
+                            <i class="far fa-heart heartcard far"></i>
+                            <i class="fas fa-heart heartcard--checked"></i>
+                        </div>
                     </div>
                 </a>
 
