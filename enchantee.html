@@ -29,12 +29,16 @@
             <div class="menu">
                 <div class="heading-page">
                     <h2 class="PageTitle">La note enchantée</h2>
-                    <input type="checkbox" id="toggle" hidden />
                     <div class="heartcentered__container">
-                        <i class="far fa-heart heart-page heartcentered__active" onclick="document.getElementById('toggle').click()"></i>
-                        <i class="fas fa-heart heart-page heartcentered__checked" onclick="document.getElementById('toggle').click()"></i>
-                        </div>
+                        <input type="checkbox" id="toggle" class="toggle-checkbox" />
+                        <label for="toggle" class="icon icon1">
+                          <i class="far fa-heart heart"></i>
+                        </label>
+                        <label for="toggle" class="icon icon2">
+                          <i class="fas fa-heart heart"></i>
+                        </label>
                     </div>
+                </div>
                 
                 <div class="menu__section">
                     <h2 class="menu__title">ENTRÉES</h2>
