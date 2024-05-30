@@ -154,7 +154,7 @@ section{
 .fonctionnement__heading{
     display: flex;
     align-self: flex-start;
-    margin: 40px 0 20px 0;
+    margin: 40px 0 40px 0;
     margin-left: 35px;
     margin-right: 80%;
 }
@@ -223,6 +223,12 @@ section{
 
     &:hover {
         transform: scale(1.02);
+        
+        .gout__img,.enchantee__img,.francaise__img,.sens__img{
+            filter: brightness(110%);
+            transition: filter 0.2s ease-in-out;
+        }
+        
     }
 }    
 
@@ -261,8 +267,8 @@ section{
     @include centerbloc;
     @include New-box;
     @include boxshadow;
-    position: relative;
-    top: 20px;
+    position: absolute;
+    top: 10px;
     right: 10px;
 }
 
@@ -405,44 +411,48 @@ padding-top: 20px;
 font-size: 25px;
 }
 
+.toggle-checkbox {
+    display: none;
+  }  
+
 .heartcentered__container{
-    position: absolute;
-    height: 20px;
-    width: 20px;
+    @include centerbloc;
+    position: relative;
+    height: 50px;
+    width: 50px;
     margin-bottom: 5px;
-    right: 0px;
-    cursor: pointer;
+    margin-left: auto;
+    padding-right: 45px;
 }
 
-.heartcentered__active{
+.icon {
+    cursor: pointer;
     position: absolute;
-    right: 30px;
+    justify-content: center;
+    transition: opacity 0.2s ease; /* Transition sur l'opacité */
+  }
+
+.icon1{
     color: black;
     opacity: 1;
-    z-index: 2;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.heartcentered__checked{
-    position: absolute;
-    right: 30px;
+.icon2{
     background-image: linear-gradient(to bottom, $colorprimary, $colorsecondary);    
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 0;
-    z-index: 1;
+    transition: opacity 0.2s ease; 
 }
 
-#toggle:checked ~ .heartcentered__container .heartcentered__active {
+.toggle-checkbox:checked + .icon .icon1 {
     opacity: 0;
-    z-index: 1;
-  }
-  
-  #toggle:checked ~ .heartcentered__container .heartcentered__checked {
-    opacity: 1;
-    z-index: 2;
-  }
+}
 
+.toggle-checkbox:checked + .icon + .icon2 {
+    opacity: 1;
+}
 
 .PageTitle{
     flex-wrap: nowrap;
@@ -631,6 +641,8 @@ font-size: 25px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    height: 185px;
+    padding-bottom: 50px;
 }
 
 .fonctionnement__heading{

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   scroll-behavior: smooth;
 }
@@ -189,7 +190,7 @@ section {
 .fonctionnement__heading {
   display: flex;
   align-self: flex-start;
-  margin: 40px 0 20px 0;
+  margin: 40px 0 40px 0;
   margin-left: 35px;
   margin-right: 80%;
 }
@@ -275,6 +276,10 @@ section {
 .carte:hover {
   transform: scale(1.02);
 }
+.carte:hover .gout__img, .carte:hover .enchantee__img, .carte:hover .francaise__img, .carte:hover .sens__img {
+  filter: brightness(110%);
+  transition: filter 0.2s ease-in-out;
+}
 
 .gout__img, .enchantee__img, .francaise__img, .sens__img {
   position: relative;
@@ -325,8 +330,8 @@ section {
   line-height: 16px;
   background-color: #99E2D0;
   box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.15);
-  position: relative;
-  top: 20px;
+  position: absolute;
+  top: 10px;
   right: 10px;
 }
 
@@ -483,42 +488,49 @@ section {
   font-size: 25px;
 }
 
-.heartcentered__container {
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  margin-bottom: 5px;
-  right: 0px;
-  cursor: pointer;
+.toggle-checkbox {
+  display: none;
 }
 
-.heartcentered__active {
+.heartcentered__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  padding-right: 45px;
+}
+
+.icon {
+  cursor: pointer;
   position: absolute;
-  right: 30px;
+  justify-content: center;
+  transition: opacity 0.2s ease; /* Transition sur l'opacité */
+}
+
+.icon1 {
   color: black;
   opacity: 1;
-  z-index: 2;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.heartcentered__checked {
-  position: absolute;
-  right: 30px;
+.icon2 {
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
-  z-index: 1;
+  transition: opacity 0.2s ease;
 }
 
-#toggle:checked ~ .heartcentered__container .heartcentered__active {
+.toggle-checkbox:checked + .icon .icon1 {
   opacity: 0;
-  z-index: 1;
 }
 
-#toggle:checked ~ .heartcentered__container .heartcentered__checked {
+.toggle-checkbox:checked + .icon + .icon2 {
   opacity: 1;
-  z-index: 2;
 }
 
 .PageTitle {
@@ -726,6 +738,8 @@ section {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    height: 185px;
+    padding-bottom: 50px;
   }
   .fonctionnement__heading {
     left: 25px;
