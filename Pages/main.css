@@ -28,10 +28,15 @@
   100% {
     opacity: 0;
     display: none;
+    z-index: -10;
   }
 }
 html {
   scroll-behavior: smooth;
+}
+
+.mainContainer {
+  height: 100vh;
 }
 
 body {
@@ -76,7 +81,6 @@ header {
   flex-direction: row;
   justify-content: space-between;
   margin: 0 50px 0 50px;
-  z-index: 2;
 }
 
 .bandeHeader__link {
@@ -133,6 +137,7 @@ section {
   height: 42px;
   background-color: #ECECEC;
   width: 100%;
+  z-index: -1;
 }
 
 .zone-txt {
@@ -411,6 +416,10 @@ section {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+label {
+  position: absolute;
 }
 
 .heartcard__container {
